@@ -53,7 +53,11 @@ library(stargazer)
 # open the data file we just imported using "import dataset...". In the window that 
 # opens, you'll notice we can manually change the type of data for each column...
 
-data <- 
+data <- read_csv("C:\\Users\\criom\\Documents\\GitHub\\StatsII_Spring2024\\tutorials\\tutorial01\\P_Data_Extract_From_World_Development_Indicators\\84a7bbeb-c20d-4907-a10b-50c1fa3d0b09_Data.csv",
+                 col_types = cols(
+                   "Ease of doing business rank (1=most business-friendly regulations) [IC.BUS.EASE.XQ]" = col_double(),
+                   "Tax revenue (% of GDP) [GC.TAX.TOTL.GD.ZS]" = col_double(),
+                   "GDP per capita (current US$) [NY.GDP.PCAP.CD]" = col_double()))
 
 #### Wrangling the data
 # We should now have a dataset where our variables are at least of the correct type.
@@ -63,9 +67,13 @@ data <-
 # 1. First, let's have a look at our data object. Use the functions we learned from last
 #    term. 
 
+head(data)
+
 # 2. Let's drop the rows and columns we don't need.
 # We only have one year, so the two cols related to year can be dropped; also, we only
 # really need one col for country name, so let's drop country code too.
+
+
   
 # 3. Let's also get rid of the variable code in square brackets
 

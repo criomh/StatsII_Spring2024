@@ -84,7 +84,7 @@ $$D = \max_{i=1:n} \Big\{ \frac{i}{n}  - F_{(i)}, F_{(i)} - \frac{i-1}{n} \Big\}
 \noindent where $F$ is the theoretical cumulative distribution of the distribution being tested and $F_{(i)}$ is the $i$th ordered value. Intuitively, the statistic takes the largest absolute difference between the two distribution functions across all $x$ values. Large values indicate dissimilarity and the rejection of the hypothesis that the empirical distribution matches the queried theoretical distribution. The p-value is calculated from the Kolmogorov-
 Smirnoff CDF:
 
-$$p(D \leq x) \frac{\sqrt {2\pi}}{x} \sum _{k=1}^{\infty }e^{-(2k-1)^{2}\pi ^{2}/(8x^{2})}$$
+$$p(D \leq d)= \frac{\sqrt {2\pi}}{d} \sum _{k=1}^{\infty }e^{-(2k-1)^{2}\pi ^{2}/(8d^{2})}$$
 
 
 \noindent which generally requires approximation methods (see \href{https://core.ac.uk/download/pdf/25787785.pdf}{Marsaglia, Tsang, and Wang 2003}). This so-called non-parametric test (this label comes from the fact that the distribution of the test statistic does not depend on the distribution of the data being tested) performs poorly in small samples, but works well in a simulation environment. Write an \texttt{R} function that implements this test where the reference distribution is normal. Using \texttt{R} generate 1,000 Cauchy random variables (\texttt{rcauchy(1000, location = 0, scale = 1)}) and perform the test (remember, use the same seed, something like \texttt{set.seed(123)}, whenever you're generating your own data).\\
@@ -99,11 +99,39 @@ $$p(D \leq x) \frac{\sqrt {2\pi}}{x} \sum _{k=1}^{\infty }e^{-(2k-1)^{2}\pi ^{2}
 	# generate test statistic
 	D <- max(abs(empiricalCDF - pnorm(data))) \end{lstlisting}
 
+\noindent Kolmogorov-Smirnov test function
+
+\lstinputlisting[language=R, firstline=47,lastline=68]{PS1.R}
+
+\noindent Implement custom function with the generated data. Test confirms TRUE.
+
+\lstinputlisting[language=R, firstline=70,lastline=72]{PS1.R} 
+
+\noindent Lastly, Compare the given Reference values with the Custom Outputs. Note there is a difference of approximately $0.12$ between the generated Test Statistic and the custom function Test Statistic. I am currently unsure what the implications of this result are.
+
+\lstinputlisting[language=R, firstline=74,lastline=77]{PS1.R} 
+
 \vspace{3in}
 
 \section*{Question 2}
 \noindent Estimate an OLS regression in \texttt{R} that uses the Newton-Raphson algorithm (specifically \texttt{BFGS}, which is a quasi-Newton method), and show that you get the equivalent results to using \texttt{lm}. Use the code below to create your data.
 \vspace{.5cm}
-\lstinputlisting[language=R, firstline=51,lastline=53]{PS1.R} 
+\lstinputlisting[language=R, firstline=88,lastline=93]{PS1.R} 
+
+\noindent The parameters are set to $c(1, 1)$ as a starting point for the algorithm to optimise over in order to reach the MLE. Note the $RSS$ function is defined as a lambda function, though alternatively could be defined beforehand within the main or same function environment.
+
+\lstinputlisting[language=R, firstline=90,lastline=98]{PS1.R} 
+
+\noindent Then the built-in lm() function is used for comparison:
+
+\lstinputlisting[language=R, firstline=100,lastline=101]{PS1.R} 
+
+\noindent Now the coefficients are extracted for comparison:
+
+\lstinputlisting[language=R, firstline=103,lastline=105]{PS1.R} 
+
+\noindent Lastly, demonstrate the coefficients are the same, confirming my custom model functions correctly.
+
+\lstinputlisting[language=R, firstline=107,lastline=109]{PS1.R} 
 
 \end{document}
