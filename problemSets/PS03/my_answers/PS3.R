@@ -188,8 +188,8 @@ pos_tab1 <- stargazer(mod.ps1, type = "latex")
 pos_tab2 <- stargazer(mod.ps2, type = "latex")
 
 # Exponentiating log-count coefficients
-exp(mod.ps1$coefficients)
-exp(mod.ps2$coefficients)
+pos_exp1 <- exp(mod.ps1$coefficients)
+pos_exp2 <- exp(mod.ps2$coefficients)
 
 # Create hypothetical district
 pred <- data.frame(MunicipCode = 0,

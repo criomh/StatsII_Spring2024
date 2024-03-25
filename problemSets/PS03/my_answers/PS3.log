@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.24)  24 MAR 2024 23:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.24)  25 MAR 2024 00:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -963,20 +963,20 @@ File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 140.
-) (PS3.R) (PS3.R)
-Overfull \hbox (61.39636pt too wide) in paragraph at lines 151--152
+) (PS3.R) (PS3.R) (PS3.R) [4]
+Overfull \hbox (61.39636pt too wide) in paragraph at lines 153--154
 \OT1/cmr/m/n/12 Note the first model does not re-turn a statistically-significa
 nt co-ef-fi-cient for \OT1/cmtt/m/n/12 competitive.district
  []
 
-[4] [5] [6]
-Overfull \hbox (27.95853pt too wide) in paragraph at lines 229--230
+[5] [6]
+Overfull \hbox (27.95853pt too wide) in paragraph at lines 231--232
 \OT1/cmr/m/n/12 an av-er-age poverty level (\OT1/cmtt/m/n/12 marginality.06 \OT
 1/cmr/m/n/12 = 0), and a PAN gov-er-nor (\OT1/cmtt/m/n/12 PAN.governor.06\OT1/c
 mr/m/n/12 =1). 
  []
 
-[7] (PS3.aux)
+(PS3.R) [7] (PS3.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -989,10 +989,10 @@ Package rerunfilecheck Info: File `PS3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27311 strings out of 475248
- 478972 string characters out of 5757813
+ 27349 strings out of 475248
+ 479588 string characters out of 5757813
  2223785 words of memory out of 5000000
- 48244 multiletter control sequences out of 15000+600000
+ 48254 multiletter control sequences out of 15000+600000
  569162 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,10n,89p,3237b,2119s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1011,9 +1011,9 @@ b><C:/Users/criom/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmsy8.pfb><C:/Users/criom/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmti12.pfb><C:/Users/criom/AppData/Local/Programs/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmtt12.pfb>
-Output written on PS3.pdf (7 pages, 173399 bytes).
+Output written on PS3.pdf (7 pages, 178147 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 94 named destinations out of 1000 (max. 500000)
+ 242 PDF objects out of 1000 (max. 8388607)
+ 118 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

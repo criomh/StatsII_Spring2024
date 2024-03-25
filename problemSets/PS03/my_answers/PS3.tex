@@ -144,7 +144,9 @@
 	
 	\noindent First, run Poisson regressions with only \texttt{competitive.district} as the predictor, and then with \texttt{competitive.district}, \texttt{marginality.06} and \texttt{PAN.governor.06} as predictors.
 	
-	\lstinputlisting[language=R, firstline=20, lastline=20]{PS3.R}
+	\lstinputlisting[language=R, firstline=173, lastline=184]{PS3.R}
+	
+	\lstinputlisting[language=R, firstline=191, lastline=192]{PS3.R}
 	
 	\noindent Note the coefficients of a Poisson regression represent the \textbf{average change} in the \textbf{expected log-count} of the outcome/response variable with a \textbf{one-unit change} in the corresponding predictor, holding all other predictors  constant. Therefore, the corresponding \textbf{exponentiated value} represents the \textbf{average change in the expected count} of the outcome variable \textbf{in percentage terms} for a 1-unit increase in the corresponding predictor, holding all others constant.
 	
@@ -229,6 +231,8 @@
 	Provide the estimated mean number of visits from the winning PAN presidential candidate for a hypothetical district that was competitive (\texttt{competitive.district}=1), had an average poverty level (\texttt{marginality.06} = 0), and a PAN governor (\texttt{PAN.governor.06}=1).
 	
 	\noindent The predicted mean number of visits for the given hypothetical district is 0.015 visits.
+	
+	\lstinputlisting[language=R, firstline=194, lastline=202]{PS3.R}
 	
 \end{enumerate}
 
