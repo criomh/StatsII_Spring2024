@@ -117,9 +117,19 @@
 
 	\lstinputlisting[language=R, firstline=102, lastline=107]{PS3.R}
 	
+	\noindent Interpretation:
+	
+	\noindent The intercept represents the average baseline \textbf{log-odds} of being in the reference category (in this case, "no change" for GDPWdiff), when all other predictor variables are zero.
+	
+	\noindent The rest of the coefficients represent the average change in the log-odds of membership in each outcome category \textit{compared to} the reference category, for a 1-unit increase in the corresponding predictor variable, holding all other variables constant.
+	
+	\noindent The exponents of these log-odds values are the odds ratio (likelihood) of membership with the given category with a 1-unit change across the corresponding label, all other predictors holding constant.
+	
 	\item Construct and interpret an ordered multinomial logit with \texttt{GDPWdiff} as the outcome variable, including the estimated cutoff points and coefficients.
 
 	\noindent Fit ordered multinominal logistic regression
+	
+	\noindent Here, the model assumes a relative increasing magnitude across the values of \texttt{GDPWdiff} AND the values of \texttt{REG} ("Non-Democracy" to "Democracy").
 
 	\lstinputlisting[language=R, firstline=110, lastline=115]{PS3.R}
 	
